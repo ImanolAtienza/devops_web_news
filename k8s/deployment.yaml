@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: devops-daily
-          image: imanolAtienza/devops-daily:latest
+          image: host.docker.internal:5001/devops-daily:latest
           ports:
             - containerPort: 80
           resources:
