@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-daily
+  namespace: devops-daily
+  labels:
+    app: devops-daily
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-daily
+  template:
+    metadata:
+      labels:
+        app: devops-daily
+    spec:
+      containers:
+        - name: devops-daily
+          image: imanolAtienza/devops-daily:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
