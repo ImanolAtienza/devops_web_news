@@ -17,8 +17,7 @@ spec:
     spec:
       containers:
         - name: devops-daily
-          image: devops-daily:latest
-          imagePullPolicy: Never 
+          image: lithwing/devops-daily:latest
           ports:
             - containerPort: 80
           resources:
