@@ -32,7 +32,7 @@ async function fetchNews(prompt) {
     const tid  = setTimeout(() => ctrl.abort(), 90000);
     let res;
     try {
-      res = await fetch(ANTHROPIC_API_URL, {
+      res = await fetch("/api/proxy/messages", {
         method: "POST", signal: ctrl.signal,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
