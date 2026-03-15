@@ -18,6 +18,7 @@ spec:
       containers:
         - name: devops-daily
           image: host.docker.internal:5001/devops-daily:latest
+          imagePullPolicy: Never 
           ports:
             - containerPort: 80
           resources:
